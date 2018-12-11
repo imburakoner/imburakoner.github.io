@@ -10,11 +10,11 @@ relative_permalinks: true
 # Setup
 timezone:            your timezone # eg. Asia/Kathmandu
 locale:              your locale language # eg. en_us
-name:				         site name
-title:               site title
+name:				         Burak Öner
+title:               iOS Developer
 tagline:             'tagline'
 description:         'description'
-url:                 site url
+url:                 https://imburakoner.github.io
 rss:                 rss feed url
 baseurl:             '/'
 baseurl_posts_img:   '/assets/images/posts/'
@@ -25,12 +25,12 @@ icon:                your site icon path # /assets/img/icon.png [best 300px X 30
 disqus:              disqus_shortname # get it on https://disqus.com/admin/
 
 author:
-  name:           	 your name
-  url:            	 your site url
-  facebook:          username
-  twitter:           username
-  google_plus:       username
-  linkedin:          username
+  name:           	 Burak
+  url:            	 https://imburakoner.github.io
+  facebook:          imburakoner
+  twitter:           imburakoner
+  google_plus:       imburakoner
+  linkedin:          imburakoner
   dribbble:          username
   pinterest:         username
   kiva:              username
