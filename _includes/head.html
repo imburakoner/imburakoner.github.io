@@ -1,28 +1,46 @@
-<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
+{%- include snippets/get-article-title.html article=page -%}
+<title>{%- if __return -%}{{ __return }} - {{ site.title }}{%- else -%}{{ site.title }}{%- endif -%}</title>
 
-  <title>Stylish Portfolio - Start Bootstrap Theme</title>
+<meta name="description" content="{%- if page.excerpt -%}{{ page.excerpt | strip_html | strip_newlines | strip | truncate: 160 }}{%- else -%}{{ site.description }}{%- endif -%}">
+<link rel="canonical" href="{%- include snippets/page-url.html -%}">
 
-  <!-- Bootstrap Core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+{%- assign _paths_rss = site.paths.rss | default: site.data.variables.default.paths.rss -%}
+{%- include snippets/get-nav-url.html path=_paths_rss -%}
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ __return }}">
+<!-- begin favicon -->
+{%- include snippets/prepend-baseurl.html path='/assets/apple-touch-icon.png' -%}
+<link rel="apple-touch-icon" sizes="180x180" href="{{ __return }}">
 
-  <!-- Custom CSS -->
-  <link href="css/stylish-portfolio.css" rel="stylesheet">
+{%- include snippets/prepend-baseurl.html path='/assets/favicon-32x32.png' -%}
+<link rel="icon" type="image/png" sizes="32x32" href="{{ __return }}">
 
-  <!-- Custom Fonts -->
-  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+{%- include snippets/prepend-baseurl.html path='/assets/favicon-16x16.png' -%}
+<link rel="icon" type="image/png" sizes="16x16" href="{{ __return }}">
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
+{%- include snippets/prepend-baseurl.html path='/assets/site.webmanifest' -%}
+<link rel="manifest" href="{{ __return }}">
 
-</head>
+{%- include snippets/prepend-baseurl.html path='/assets/safari-pinned-tab.svg' -%}
+<link rel="mask-icon" href="{{ __return }}" color="#fc4d50">
+
+{%- include snippets/prepend-baseurl.html path='/assets/favicon.ico' -%}
+<link rel="shortcut icon" href="{{ __return }}">
+
+<meta name="msapplication-TileColor" content="#ffc40d">
+
+{%- include snippets/prepend-baseurl.html path='/assets/browserconfig.xml' -%}
+<meta name="msapplication-config" content="{{ __return }}">
+
+<meta name="theme-color" content="#ffffff">
+<!-- end favicon -->
+
+{%- include snippets/prepend-baseurl.html path='/assets/css/main.css' -%}
+<link rel="stylesheet" href="{{ __return }}">
+
+{%- include snippets/get-sources.html -%}
+{%- assign _sources = __return -%}
+<link rel="stylesheet" href="{{ _sources.font_awesome }}" >
