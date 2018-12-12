@@ -3,7 +3,7 @@ title:  "imburakoner"
 subtitle: "me"
 author: "imburakoner"
 avatar: "img/authors/profile.JPG"
-image: "img/profile.JPG"
+image: "img/c.jpg"
 date:   2018-11-11 12:12:12
 ---
 
