@@ -1,10 +1,10 @@
 ---
-title:  "Watches"
-subtitle: "The Bigger the better?"
-author: "Wferr"
-avatar: "img/authors/wferr.png"
-image: "img/c.jpg"
-date:   2015-04-22 12:12:12
+title:  "imburakoner"
+subtitle: "me"
+author: "imburakoner"
+avatar: "img/authors/profile.JPG"
+image: "img/profile.JPG"
+date:   2018-11-11 12:12:12
 ---
 
 ### Dolor sit amet?
